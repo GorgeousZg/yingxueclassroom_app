@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 
+
 class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -25,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     如果结束则执行页面跳转动作,跳转到home界面。 */
     _animation.addStatusListener((status){
       if(status==AnimationStatus.completed){
-        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=>MyHomePage()), (route)=>route==null);
+        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=>HomePageWidget()), (route)=>route==null);
       }
     });
     //播放动画
