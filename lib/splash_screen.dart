@@ -45,10 +45,12 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     //透明度动画组件
     return FadeTransition(
       opacity: _animation,//执行动画
-      child: Image.network(
-          'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565625853431&di=074322e4694e662d371c60743e16784d&imgtype=0&src=http%3A%2F%2Fupload.taihainet.com%2Fnews%2FUploadFiles_6334%2F201312%2F20131226073319201_m.jpg',
+      child: Image.asset(
+          'images/logo.png',
+//          width:200,
+//          height:200,
           scale:2.0,//图片缩放
-          fit:BoxFit.cover    // 充满父容器
+          fit:BoxFit.fill    // 充满父容器
       ),
     );
   }
