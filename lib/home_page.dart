@@ -14,8 +14,8 @@ class _BottomNavigationWidgetState extends State<HomePageWidget> {
   void initState(){
     list
       ..add(HomeScreen())
-      ..add(PersonalCenterScreen())
-      ..add(SnowCircleScreen());
+      ..add(SnowCircleScreen())
+      ..add(PersonalCenterScreen());
     super.initState();
   }
   @override

@@ -6,40 +6,231 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('映雪课堂')),
       body: Align(
-        // Alignment(0.0,0.0)表示矩形的中心。从-1.0到+1.0的距离是矩形的一边到另一边的距离。
-        // alignment: Alignment(1, 0),
-        // FractionalOffset(1, 1) 类似Alignment() 但是坐标起点是左上角，且范围为0~1 比如 FractionalOffset(0.5, 0.5) 代表中间位置
         alignment: Alignment.topCenter,
         child: Container(
           color: Colors.white,
           height: 200,
           width: 400,
-          child: Stack(children: <Widget>[
+          child: Wrap(
+              spacing:20,
+              runSpacing: 25,
+              children: <Widget>[
             Container(
-              width: 60,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("images/icon_book.png"),
-                    fit: BoxFit.scaleDown
+                margin:EdgeInsets.fromLTRB(10, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_book.png"),
+                      fit: BoxFit.scaleDown),
                 ),
-              ),
-              alignment: Alignment.center,
-              child: FlatButton(
-                padding:new EdgeInsets.fromLTRB(0.0, 30.0, 0.0, 0.0),
-                onPressed: (){
-
-                },
-                child: Text("作业",
-                    textAlign: TextAlign.center
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("作业", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(0, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_notice.png"),
+                      fit: BoxFit.scaleDown),
                 ),
-                color: Colors.transparent,
-              ),
-            )
-
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("通知", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(0, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_clock.png"),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("打卡", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(0, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_surface.png"),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("填表", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(0, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_schoolReport.png"),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("作业", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(10, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_growthRecord.png"),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("成长记录", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(0, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_classStatis.png"),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("班级统计", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(0, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_mailList.png"),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("通讯录", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                )),
+            Container(
+                margin:EdgeInsets.fromLTRB(0, 10, 0, 0),
+                width: 60,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("images/icon_invitation.png"),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Stack(
+                  fit: StackFit.expand,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                        top: 30,
+                        left: -15,
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("邀请成员", textAlign: TextAlign.center),
+                          color: Colors.transparent,
+                        ))
+                  ],
+                ))
           ]),
+
         ),
       ),
       backgroundColor: Colors.indigo[50],
     );
+  }
+
+  void homeFunction(){
+
   }
 }
